@@ -39,6 +39,7 @@
 			this.backupButton = new System.Windows.Forms.Button();
 			this.toDesktopButton = new System.Windows.Forms.Button();
 			this.syncToQuestButton = new System.Windows.Forms.Button();
+			this.cancelBackupButton = new System.Windows.Forms.Button();
 			this.flowLayoutPanel1.SuspendLayout();
 			this.loadingPanel.SuspendLayout();
 			this.flowLayoutPanel2.SuspendLayout();
@@ -54,6 +55,7 @@
 			this.flowLayoutPanel1.Controls.Add(this.label1);
 			this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
 			this.flowLayoutPanel1.Controls.Add(this.backupButton);
+			this.flowLayoutPanel1.Controls.Add(this.cancelBackupButton);
 			this.flowLayoutPanel1.Controls.Add(this.toDesktopButton);
 			this.flowLayoutPanel1.Controls.Add(this.syncToQuestButton);
 			this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -144,7 +146,7 @@
 			// 
 			// toDesktopButton
 			// 
-			this.toDesktopButton.Location = new System.Drawing.Point(3, 209);
+			this.toDesktopButton.Location = new System.Drawing.Point(3, 249);
 			this.toDesktopButton.Name = "toDesktopButton";
 			this.toDesktopButton.Size = new System.Drawing.Size(238, 41);
 			this.toDesktopButton.TabIndex = 5;
@@ -155,13 +157,24 @@
 			// syncToQuestButton
 			// 
 			this.syncToQuestButton.Enabled = false;
-			this.syncToQuestButton.Location = new System.Drawing.Point(3, 256);
+			this.syncToQuestButton.Location = new System.Drawing.Point(3, 296);
 			this.syncToQuestButton.Name = "syncToQuestButton";
 			this.syncToQuestButton.Size = new System.Drawing.Size(238, 36);
 			this.syncToQuestButton.TabIndex = 6;
 			this.syncToQuestButton.Text = "Sync to Oculus Quest";
 			this.syncToQuestButton.UseVisualStyleBackColor = true;
 			this.syncToQuestButton.Click += new System.EventHandler(this.syncToQuestButton_Click);
+			// 
+			// cancelBackupButton
+			// 
+			this.cancelBackupButton.Enabled = false;
+			this.cancelBackupButton.Location = new System.Drawing.Point(3, 209);
+			this.cancelBackupButton.Name = "cancelBackupButton";
+			this.cancelBackupButton.Size = new System.Drawing.Size(75, 34);
+			this.cancelBackupButton.TabIndex = 7;
+			this.cancelBackupButton.Text = "Cancel Backup";
+			this.cancelBackupButton.UseVisualStyleBackColor = true;
+			this.cancelBackupButton.Click += new System.EventHandler(this.cancelBackupButton_Click);
 			// 
 			// Form1
 			// 
@@ -195,6 +208,7 @@
 		private System.Windows.Forms.Button backupButton;
 		private System.Windows.Forms.Button toDesktopButton;
 		private System.Windows.Forms.Button syncToQuestButton;
+		private System.Windows.Forms.Button cancelBackupButton;
 	}
 }
 

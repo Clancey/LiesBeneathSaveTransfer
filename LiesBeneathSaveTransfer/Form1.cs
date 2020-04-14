@@ -89,6 +89,7 @@ namespace LiesBeneathSaveTransfer
 				return;
 			try
 			{
+				cancelBackupButton.Enabled = true;
 				backupCancelationTokenSource = new CancellationTokenSource();
 				isRunningBackup = true;
 				var isDeviceReady = await IsDeviceReady();
@@ -104,6 +105,7 @@ namespace LiesBeneathSaveTransfer
 			finally
 			{
 				isRunningBackup = false;
+				cancelBackupButton.Enabled = false;
 			}
 		}
 
@@ -301,6 +303,18 @@ namespace LiesBeneathSaveTransfer
 
 				file.Write(buildOutData, 0, buildOutData.Length);
 				file.Write(saveData, buildoutEnd, saveData.Length - buildoutEnd);
+			}
+		}
+
+		private void cancelBackupButton_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				backupCancelationTokenSource?.Cancel();
+			}
+			catch
+			{
+
 			}
 		}
 	}
